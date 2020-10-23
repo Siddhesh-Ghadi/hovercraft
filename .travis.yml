@@ -9,7 +9,6 @@ arch:
   - amd64
   - ppc64le
   
-befor_install: if [[ "$TRAVIS_CPU_ARCH" == "ppc64le" ]]; then ls -al ~/.cache/;ls -al ~/.cache/pip/;sudo chown -Rv $USER:$GROUP ~/.cache/pip/wheels; fi  
 # command to run tests
 install: python setup.py develop
 script: python setup.py test
